@@ -5,43 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poker</title>
-  <link rel="shortcut icon" href="img\favicon.png" />
-  <link rel="stylesheet" href="img\styles.css" />
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/8bit-wonder');
-
-    body {
-      margin: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: #181818;
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      justify-content: center;
-      align-items: center;
-
-      /* Font settings */
-      font-family: '8BIT WONDER', sans-serif;
-      font-size: 18px;
-      color: #fff;
-
-      user-select: none;
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      align-items: center;
-      overscroll-behavior: none;
-      touch-action: none;
-    }
-  </style>
+  <link rel="shortcut icon" href="img\favicon.png"/>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
 
 <body>
   <h1>Poker</h1>
   <div id="poker-board">
-    <canvas id="poker-canvas" width="800" height="600"></canvas>
+    <canvas id="poker-canvas" width="80" height="60"></canvas>
   </div>
-  <div id="poker-info"></div>
+  <div id="poker-info">
+    <div id="poker-cards">
+      <img id="img1" src="../cards/10-clubs.png">
+      <img id="img2" src="../cards/10-diamonds.png">
+    </div>
+    <div id="points"></div>
+  </div>
 </body>
 
 <script src="poker.js"></script>
