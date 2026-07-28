@@ -5,21 +5,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poker</title>
-  <link rel="shortcut icon" href="img\favicon.png"/>
-  <link rel="stylesheet" href="./style.css"/>
+  <link rel="shortcut icon" href="img\favicon.png" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <h1>Poker</h1>
+  <div id="title">
+    <h1>Poker</h1>
+  </div>
   <div id="poker-board">
     <canvas id="poker-canvas" width="80" height="60"></canvas>
   </div>
   <div id="poker-info">
     <div id="poker-cards">
-      <img id="img1" src="../cards/10-clubs.png">
-      <img id="img2" src="../cards/10-diamonds.png">
+      <div id="img1">
+        <img class="img" src="../cards/10-clubs.png">
+        <div class="shadow"></div>
+      </div>
+      <div id="img2">
+        <img class="img" src="../cards/10-diamonds.png">
+        <div class="shadow"></div>
+      </div>
     </div>
-    <div id="points"></div>
+    <div id="points">
+      <div id="chips">
+        <div id="white-chips" class="chip-container">
+          <div id="w-s-1" class="chip-stack">
+            <img id="w-c-0" class="chip" src="../chips/white_chip.png">
+            <img id="w-c-1" class="chip" src="../chips/white_chip.png">
+            <img id="w-c-2" class="chip" src="../chips/white_chip.png">
+            <img id="w-c-3" class="chip" src="../chips/white_chip.png">
+            <img id="w-c-4" class="chip" src="../chips/white_chip.png">
+          </div>
+        </div>
+        <div id="red-chips" class="chip-container"></div>
+        <div id="green-chips" class="chip-container"></div>
+        <div id="blue-chips" class="chip-container"></div>
+        <div id="black-chips" class="chip-container"></div>
+      </div>
+      <div id="points-value">1450</div>
+    </div>
   </div>
 </body>
 
