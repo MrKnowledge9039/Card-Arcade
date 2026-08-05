@@ -26,20 +26,50 @@ body {
     -webkit-touch-callout: none;
     overscroll-behavior: none;
     touch-action: none;
+    position: relative;
 }
 
 #title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 15%;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+    background-color: #181818;
+}
+
+#poker-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#poker-board {
-    position: relative;
+#test1 {
     width: 100%;
-    height: 60%;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#test2 {
+    height: min(100%, 100vh);
+    aspect-ratio: 2 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,19 +83,10 @@ body {
     align-items: center;
     background-color: #00ac00; /* placeholder */
     border-radius: 40%;
+    z-index: 0;
 }
 
-#poker-info {
-    position: relative;
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-#poker-cards {
+.poker-cards {
     width: 50%;
     height: 100%;
     display: flex;
@@ -74,29 +95,28 @@ body {
     flex-direction: row;
 }
 
-#img1 {
+.img-w {
     position: relative;
-    transform: rotateZ(-8deg);
-    translate: 7px 0px;
     transform-origin: 50% 50%;
-    height: 100%;
+    height: 60%;
     aspect-ratio: 57 / 79;
 }
 
+#img1 {
+    transform: rotateZ(-8deg);
+    translate: 7px 0px;
+}
+
 #img2 {
-    position: relative;
     transform: rotateZ(4deg); /* randomize with js */
     transform-origin: 50% 50%;
-    translate: -7px 0px;
-    height: 100%;
-    aspect-ratio: 57 / 79;
 }
 
 .img {
     position: absolute;
     top: 0;
     left: 0;
-    height: 90%;
+    height: 100%;
     aspect-ratio: 57 / 79;
     object-fit: cover;
     image-rendering: pixelated;
@@ -107,56 +127,158 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 90%;
+    height: 100%;
     aspect-ratio: 57 / 79;
     box-shadow: 0px 0px 10px 2px #00000097;
     border-radius: 12%;
+    z-index: 1;
 }
 
 
-#points {
+.chips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#chips {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#points-value {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.chip-container {
+#chips-c {
     position: relative;
-    box-sizing: border-box;
+    height: 0;
+    width: 0;
+}
+
+.visuals {
+    height: 60%;
+    width: 100%;
     display: flex;
-    width: 20%;
-    height: 100%;
-    margin: 5px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.name {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.score {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    flex-direction: column;
+    height: 200px;
+    width: 250px;
 }
 
 .chip-stack {
-    height: 100%;
+    height: 20%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .chip {
-    height: 100%;
+    height: 20px;
     aspect-ratio: 28 / 23;
+    image-rendering: pixelated;
+}
+
+.c-0 {
+    z-index: 0;
+    transform: translateY(0px);
+}
+.c-1 {
+    z-index: 1;
+    transform: translateY(16px);
+}
+.c-2 {
+    z-index: 2;
+    transform: translateY(32px);
+}
+.c-3 {
+    z-index: 3;
+    transform: translateY(48px);
+}
+.c-4 {
+    z-index: 4;
+    transform: translateY(64px);
+}
+
+.s-0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.s-1 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+.s-2 {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.s-3 {
+    position: absolute;
+    top: -25px;
+    left: -15px;
+}
+
+.s-4 {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+}
+
+.s-5 {
+    position: absolute;
+    top: -25px;
+    left: -45px;
+}
+
+.s-6 {
+    position: absolute;
+    top: -25px;
+    left: 45px;
+}
+
+.s-7 {
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.s-8 {
+    position: absolute;
+    top: -50px;
+    left: -30px;
+}
+
+.s-9 {
+    position: absolute;
+    top: -50px;
+    left: 30px;
 }
