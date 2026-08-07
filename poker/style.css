@@ -17,7 +17,7 @@ body {
     flex-direction: column;
 
     /* Font settings */
-    font-family: '8BIT WONDER', sans-serif;
+    font-family: '8bit Wonder', monospace;
     font-size: 18px;
     color: #fff;
 
@@ -73,6 +73,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #poker-canvas {
@@ -84,10 +85,22 @@ h1 {
     background-color: #00ac00; /* placeholder */
     border-radius: 40%;
     z-index: 0;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#players-c {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .poker-cards {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -98,16 +111,16 @@ h1 {
 .img-w {
     position: relative;
     transform-origin: 50% 50%;
-    height: 60%;
+    height: 80%;
     aspect-ratio: 57 / 79;
 }
 
-#img1 {
+.card0 {
     transform: rotateZ(-8deg);
     translate: 7px 0px;
 }
 
-#img2 {
+.card1 {
     transform: rotateZ(4deg); /* randomize with js */
     transform-origin: 50% 50%;
 }
@@ -139,14 +152,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
 #chips-c {
     position: relative;
-    height: 0;
-    width: 0;
+    width: 100%;
+    height: 100%;
+    top: -5%;
+    left: 0%;
 }
 
 .visuals {
@@ -161,35 +176,47 @@ h1 {
 .name {
     width: 100%;
     height: 20%;
-    display: flex;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
+    font-size: 100%;
     z-index: 10;
+    line-height: 1.5;
+
+    background: linear-gradient(0deg,#a30909 10%, #c40b0b 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(255, 98, 98),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #ce07079d inset;
+
+    border-radius: 15px;
+    text-shadow: 3px 3px 2px #00000057;
+    overflow: hidden;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    text-align: center;
 }
 
 .score {
     width: 100%;
     height: 20%;
     display: flex;
-    font-size: 20px;
+    font-size: 90%;
     justify-content: center;
     align-items: center;
     z-index: 10;
 }
 
 .player {
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: space-evenly;
+    align-items: center;
     flex-direction: column;
-    height: 200px;
-    width: 250px;
+    height: max(30%, 160px);
+    width: max(25%, 220px);
 }
 
 .chip-stack {
-    height: 20%;
-    width: 10%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +224,7 @@ h1 {
 }
 
 .chip {
-    height: 20px;
+    height: 20%;
     aspect-ratio: 28 / 23;
     image-rendering: pixelated;
 }
@@ -208,19 +235,19 @@ h1 {
 }
 .c-1 {
     z-index: 1;
-    transform: translateY(16px);
+    transform: translateY(80%);
 }
 .c-2 {
     z-index: 2;
-    transform: translateY(32px);
+    transform: translateY(160%);
 }
 .c-3 {
     z-index: 3;
-    transform: translateY(48px);
+    transform: translateY(240%);
 }
 .c-4 {
     z-index: 4;
-    transform: translateY(64px);
+    transform: translateY(320%);
 }
 
 .s-0 {
@@ -232,53 +259,53 @@ h1 {
 .s-1 {
     position: absolute;
     top: 0;
-    left: -30px;
+    left: -20%;
 }
 
 .s-2 {
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 20%;
 }
 
 .s-3 {
     position: absolute;
-    top: -25px;
-    left: -15px;
+    top: -25%;
+    left: -10%;
 }
 
 .s-4 {
     position: absolute;
-    top: -25px;
-    left: 15px;
+    top: -25%;
+    left: 10%;
 }
 
 .s-5 {
     position: absolute;
-    top: -25px;
-    left: -45px;
+    top: -25%;
+    left: -30%;
 }
 
 .s-6 {
     position: absolute;
-    top: -25px;
-    left: 45px;
+    top: -25%;
+    left: 30%;
 }
 
 .s-7 {
     position: absolute;
-    top: -50px;
+    top: -50%;
     left: 0;
 }
 
 .s-8 {
     position: absolute;
-    top: -50px;
-    left: -30px;
+    top: -50%;
+    left: -20%;
 }
 
 .s-9 {
     position: absolute;
-    top: -50px;
-    left: 30px;
+    top: -50%;
+    left: 20%;
 }
