@@ -1,9 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/8bit-wonder');
 
-:root {
-
-}
-
 body {
     margin: 0;
     width: 100%;
@@ -33,7 +29,7 @@ body {
     position: absolute;
     display: grid;
     grid-template-rows: 6fr 4fr;
-    height: 100%;
+    height: 45%;
     width: 100%;
     justify-items: center;
     align-items: center;
@@ -49,9 +45,7 @@ body {
 }
 
 .the-pot {
-    position: absolute;
     display: flex;
-    grid-template-columns: repeat(5, 1fr);
     height: max(18%, 96px);
     width: max(20%, 220px);
     justify-content: center;
@@ -75,102 +69,6 @@ h1 {
     font-size: 40px;
     margin: 0;
     background-color: #181818;
-}
-
-.button-c {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    display: none;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.btn {
-    width: min(90%, 210px);
-    height: 80%;
-    margin: 0px;
-    font-family: inherit;
-    font-size: 120%;
-    border: 0;
-    border-radius: 30px;
-    background: linear-gradient(0deg,#a30909 10%, #c40b0b 90%);
-    box-shadow:
-        inset 0 5px 10px -4px rgb(255, 98, 98),
-        0 -5px 15px -9px #0000005f,
-        0 0px 10px 5px #ce07079d inset;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: linear-gradient(0deg,#c40b0b 10%, #a30909 90%);
-    box-shadow:
-        inset 0 5px 10px -4px rgb(255, 98, 98),
-        0 -5px 15px -9px #0000005f,
-        0 0px 10px 5px #ce07079d inset;
-    
-}
-
-.btn:active {
-    background: linear-gradient(0deg,#ae0d0d 10%, #930a0a 90%);
-    box-shadow:
-        inset 0 5px 10px -4px rgb(215, 73, 73),
-        0 -5px 15px -9px #0000005f,
-        0 0px 10px 5px #bd07079d inset;
-    transform: scale(0.98);
-    transition: transform 0.01s cubic-bezier(0.51, 0.39, 1, 0.74);
-}
-
-.raise-c {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.bet-amount {
-    width: max(100%, 250px);
-    height: 80%;
-    margin: 0px;
-    font-family: inherit;
-    font-size: 120%;
-    border: 0;
-    border-radius: 30px;
-    background: linear-gradient(0deg,#a30909 10%, #c40b0b 90%);
-    box-shadow:
-        inset 0 5px 10px -4px rgb(255, 98, 98),
-        0 -5px 15px -9px #0000005f,
-        0 0px 10px 5px #ce07079d inset;
-    color: #fff;
-    text-align: center;
-}
-
-.bet-amount:focus {
-    background: linear-gradient(0deg,#ae0d0d 10%, #930a0a 90%);
-    box-shadow:
-        inset 0 5px 10px -4px rgb(215, 73, 73),
-        0 -5px 15px -9px #0000005f,
-        0 0px 10px 5px #bd07079d inset;
-    transform: scale(0.98);
-}
-
-.bet-amount:focus-visible {
-  outline: 10px dashed rgba(255, 140, 0, 0);
-}
-
-.bet-amount::placeholder {
-    color: #bdbdbd;
 }
 
 
@@ -225,69 +123,14 @@ h1 {
     justify-content: center;
 }
 
-.poker-cards {
-    width: 40%;
-    height: 100%;
+.player {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-}
-
-.img-w {
-    position: relative;
-    transform-origin: 50% 50%;
-    height: 80%;
-    aspect-ratio: 57 / 79;
-}
-
-.card0 {
-    transform: rotateZ(-8deg);
-    translate: 7px 0px;
-}
-
-.card1 {
-    transform: rotateZ(4deg); /* randomize with js */
-    transform-origin: 50% 50%;
-}
-
-.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    aspect-ratio: 57 / 79;
-    object-fit: cover;
-    image-rendering: pixelated;
-    z-index: 2;
-}
-
-.shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    aspect-ratio: 57 / 79;
-    box-shadow: 0px 0px 10px 2px #00000037;
-    border-radius: 12%;
-    z-index: 1;
-}
-
-
-.chips {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 100%;
-}
-
-.chips-c {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: -5%;
-    left: 0%;
+    flex-direction: column;
+    height: max(30%, 160px);
+    width: max(25%, 220px);
 }
 
 .visuals {
@@ -328,148 +171,6 @@ h1 {
     justify-content: center;
     align-items: center;
     z-index: 10;
-}
-
-.player {
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: max(30%, 160px);
-    width: max(25%, 220px);
-}
-
-.chip-stack {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-}
-
-.chip {
-    height: 20%;
-    aspect-ratio: 28 / 23;
-    image-rendering: pixelated;
-}
-
-.c-0 {
-    z-index: 0;
-    transform: translateY(0px);
-}
-.c-1 {
-    z-index: 1;
-    transform: translateY(80%);
-}
-.c-2 {
-    z-index: 2;
-    transform: translateY(160%);
-}
-.c-3 {
-    z-index: 3;
-    transform: translateY(240%);
-}
-.c-4 {
-    z-index: 4;
-    transform: translateY(320%);
-}
-
-.s-0 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.s-1 {
-    position: absolute;
-    top: 0;
-    left: -20%;
-}
-
-.s-2 {
-    position: absolute;
-    top: 0;
-    left: 20%;
-}
-
-.s-3 {
-    position: absolute;
-    top: -25%;
-    left: -10%;
-}
-
-.s-4 {
-    position: absolute;
-    top: -25%;
-    left: 10%;
-}
-
-.s-5 {
-    position: absolute;
-    top: -25%;
-    left: -30%;
-}
-
-.s-6 {
-    position: absolute;
-    top: -25%;
-    left: 30%;
-}
-
-.s-7 {
-    position: absolute;
-    top: -50%;
-    left: 0;
-}
-
-.s-8 {
-    position: absolute;
-    top: -50%;
-    left: -20%;
-}
-
-.s-9 {
-    position: absolute;
-    top: -50%;
-    left: 20%;
-}
-
-.s-10 {
-    position: absolute;
-    top: 0;
-    left: 40%;
-}
-
-.s-11 {
-    position: absolute;
-    top: 0;
-    left: -40%;
-}
-
-.s-12 {
-    position: absolute;
-    top: -25%;
-    left: 50%;
-}
-
-.s-13 {
-    position: absolute;
-    top: -25%;
-    left: -50%;
-}
-
-.s-14 {
-    position: absolute;
-    top: -50%;
-    left: -40%;
-}
-
-.s-15 {
-    position: absolute;
-    top: -50%;
-    left: 40%;
 }
 
 .dis-n {

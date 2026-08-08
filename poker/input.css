@@ -1,0 +1,96 @@
+
+.button-c {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    width: min(90%, 210px);
+    height: 80%;
+    margin: 0px;
+    font-family: inherit;
+    font-size: 120%;
+    border: 0;
+    border-radius: 30px;
+    background: linear-gradient(0deg,#a30909 10%, #c40b0b 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(255, 98, 98),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #ce07079d inset;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(0deg,#c40b0b 10%, #a30909 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(255, 98, 98),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #ce07079d inset;
+    
+}
+
+.btn:active {
+    background: linear-gradient(0deg,#ae0d0d 10%, #930a0a 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(215, 73, 73),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #bd07079d inset;
+    transform: scale(0.98);
+    transition: transform 0.01s cubic-bezier(0.51, 0.39, 1, 0.74);
+}
+
+.raise-c {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bet-amount {
+    width: max(90%, 250px);
+    height: 80%;
+    margin: 0px;
+    font-family: inherit;
+    font-size: 120%;
+    border: 0;
+    border-radius: 30px;
+    background: linear-gradient(0deg,#a30909 10%, #c40b0b 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(255, 98, 98),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #ce07079d inset;
+    color: #fff;
+    text-align: center;
+}
+
+.bet-amount:focus {
+    background: linear-gradient(0deg,#ae0d0d 10%, #930a0a 90%);
+    box-shadow:
+        inset 0 5px 10px -4px rgb(215, 73, 73),
+        0 -5px 15px -9px #0000005f,
+        0 0px 10px 5px #bd07079d inset;
+    transform: scale(0.98);
+}
+
+.bet-amount:focus-visible {
+  outline: 10px dashed rgba(255, 140, 0, 0);
+}
+
+.bet-amount::placeholder {
+    color: #bdbdbd;
+}

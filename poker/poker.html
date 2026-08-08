@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poker</title>
   <link rel="shortcut icon" href="img\favicon.png" />
+  <link rel="stylesheet" href="./input.css" />
+  <link rel="stylesheet" href="./cards.css" />
+  <link rel="stylesheet" href="./chips.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -161,9 +164,9 @@
         </div>
         <!-- Player area -->
         <div id="players-c">
-          <div class="player">
+          <div class="player dis-n">
             <div class="visuals">
-              <div class="poker-cards">
+              <div class="player-cards">
                 <div class="img-w card0">
                   <img class="img" src="../cards/10-clubs.png">
                   <div class="shadow"></div>
@@ -262,7 +265,7 @@
     <button class="btn">Call</button>
     <button class="btn">Raise</button>
   </div>
-  <div class="raise-c">
+  <div class="raise-c dis-n">
     <div></div>
     <input class="bet-amount" type="number" step="5" placeholder="Bet Amount" min="0" required>
     <button class="btn">Confirm</button>
